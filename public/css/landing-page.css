@@ -1,0 +1,509 @@
+/* --------------------
+Base CSS Start
+----------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: #000;
+    line-height: 1.5;
+    letter-spacing: .03rem;
+}
+
+/* .letter-spacing{
+    letter-spacing: -1px;
+} */
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.container-fluid{
+    width: 90% !important;
+}
+.bg-grey{
+    background-color: #f9f9f9 !important;
+}
+.p-150{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.p-50 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.section-heading{
+    margin-bottom: 2rem;
+}
+.section-heading > h2{
+    font-weight: 400;
+    color: #444;
+    font-size: 38px;
+    margin: 0;
+}
+.opacity-1{
+    opacity: .07;
+}
+.navbar-light .navbar-toggler{
+    background-color: #fff;
+}
+.overlay-blue {
+    background: #2196F3;
+    background: rgba(33,150,243,.8);
+}
+
+.card{
+    -webkit-box-shadow: 0 10px 40px 0 rgba(62,57,107,.07), 0 2px 9px 0 rgba(62,57,107,.06);
+    box-shadow: 0 10px 40px 0 rgba(62,57,107,.07), 0 2px 9px 0 rgba(62,57,107,.06); 
+}
+
+/* --------------------
+Header Area CSS
+---------------------- */
+
+.header_area{
+/*    left: 0;*/
+/*    position: absolute;*/
+    width: 100%;
+/*    z-index: 99;*/
+/*    top: 0;*/
+    padding: 0 4%;
+    
+    box-shadow: 0.3px 0.3px 5px 1px #999;
+    background-color: #fff;
+}
+
+.menu_area .navbar-brand {
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    line-height: 1;
+    padding: 0;
+}
+
+
+.menu_area .navbar-brand:hover,
+.menu_area .navbar-brand:focus {
+    color: #333;
+}
+
+@media(max-width: 991px){
+    .header_area.sticky{
+        height: 70px !important;
+    }
+}
+
+.menu_area {
+    position: relative;
+    z-index: 2;
+}
+
+.menu_area #nav .nav-link {
+/*    color: #797979;*/
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    -webkit-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
+    padding: 10px 10px;
+    letter-spacing: 1px;
+}
+
+/*-----------------------------
+hover effect to link in header
+------------------------------*/
+
+.menu_area .nav-link.menu-item { display: inline-block; position: relative; color: #797979;}
+.menu_area .nav-link.menu-item:hover { color: var(--warning);}
+.menu_area .nav-link.menu-item:before, .menu_area .nav-link.menu-item:after { content: ''; position: absolute; bottom: .5em; height: 3px; transition: all 0.3s cubic-bezier(0.15, 0.29, 0.42, 0.63); }
+
+.menu_area .nav-link.menu-item:hover:before, .menu_area .nav-link.menu-item:hover:after { transition: all 0.3s cubic-bezier(0.54, 0.38, 0.85, 0.54); }
+
+.menu_area .nav-link.menu-item:before { left: .7em; right: 100%; border-top: 1px solid; }
+
+.menu_area .nav-link.menu-item:after { right: .7em; left: 100%; border-top: 1px solid; height: 2px; }
+
+.menu_area .nav-link.menu-item.current:before, .menu_area .nav-link.menu-item:hover:before { right: .7em; }
+
+.menu_area .nav-link.menu-item.current:after, .menu_area .nav-link.menu-item:hover:after { left: .7em; }
+
+.image-hover img{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.image-hover img:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px 5px #d9d9d987;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.button{
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 10em;
+    border: 3px solid #4e8fd1;
+    text-align: center;
+    line-height: 1;
+    transition: all .25s;
+    padding:10px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    /* font-family: Montserrat, Arial, sans-serif; */
+    margin-bottom: -100px;
+}
+.button.button--slim{
+    border-width: 2px;
+}
+.button.button--ghost{
+    color: var(--warning);
+    border-color: var(--warning);
+    background: transparent;
+}
+.button:hover{
+    color: #fff;
+    border-collapse: var(--warning);
+    background: var(--warning);
+    text-decoration: none;
+}
+
+/* --------------------
+ Wellcome Area CSS
+-----------------------*/
+
+.wellcome_area{
+    background: linear-gradient(146deg, transparent 0%, rgba(0, 0, 0, 0.4) 100%), url(../img/ginex-home-1.jpg);
+    height: 100.3vh;
+    position: relative;
+    z-index: 1;
+    background-position: bottom center;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+.wellcome_area:after{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 2px;
+    background-color: #fff;
+    content:'';
+    bottom: 0;
+    z-index: 2;
+}
+
+.wellcome-heading > h2{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+    z-index: 3;
+}
+.wellcome-heading > h3{
+    font-size: 27px;
+    color: #fff;
+    font-weight: 400;
+    /* font-family: Montserrat, Aria, sans-serif; */
+}
+.wellcome-heading > p {
+    color: #fff;
+}
+.wellcome-heading{
+    margin-bottom: 80px;
+}
+
+.welcome-thumb {
+    width: 40%;
+    position: absolute;
+    bottom: 330px;
+    right: 70px;
+    z-index: 9;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 7px 4px #777;
+    -moz-box-shadow: 0 7px 4px #777;
+    box-shadow: 0 7px 4px #777;
+}
+
+.welcome-thumb img{
+    height: auto;
+    width: 100%;
+}
+.bg-font-style{
+    font-size: 80px;
+    margin-bottom: -95px;
+    font-weight: 900;
+    opacity: .02;
+}
+
+/* --------------------
+button
+---------------------- */
+.btn.submit-btn {
+    background: #f9214f;
+    background: -moz-linear-gradient(left, #f9214f 0%,#fe6f8d 100%);
+    background: -webkit-linear-gradient(left, #F7971E 0%, #FFD200 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9214f', endColorstr='#fe6f8d',GradientType=1 ); /* IE6-9 */
+    box-shadow: -4px 2px 16px 0px #0000003b;
+    height: 48px;
+    min-width: 185px;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 50px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    padding-top: 10px;
+}
+.btn.submit-btn:hover{
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+.btn.small-btn{
+    min-width: 120px;
+    font-size: 13px;
+    padding: 3px 0;
+    height: auto;
+}
+
+/* --------------------
+Logo
+----------------------*/
+
+.logo-width{
+    width: 95px;
+    margin-right: 8px;
+    margin-top: -3px;
+    border-radius: 5px;
+}
+
+/* ----------------------
+Typerwriter
+------------------------ */
+.typewriter h2, .typewriter h3 {
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: 
+        typing 3s steps(70, end),
+        blink-caret .5s step-end infinite;
+}
+.typewriter h3{
+    color: var(--warning);
+    font-weight: 700;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/*-----------------------------
+The typewriter cursor effect 
+------------------------------*/
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-collapse: orange }
+}
+
+.box-outer{
+    overflow: hidden;
+}
+.main_box {
+    position: relative;
+}
+.bar{
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: var(--info);
+    transition: all 1s linear;
+    -webkit-animation-duration: 1s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    margin-left: -50px;
+}
+.bar.delay{
+    animation-delay: .5s;
+    -webkit-animation-delay: .5s;
+}
+.top{top: -5px; left: -5px;}
+.right{
+    top: 18px;
+    right: -28px;
+    transform: rotate(90deg);
+}
+.bottom{
+    bottom: 2px;
+    left: -5px
+}
+.left{
+    top: 18px;
+    left: -28px;
+    transform: rotate(90deg);
+}
+@-webkit-keyframes h-move {
+    0%{
+        left: -5px;
+    }
+    100%{
+        left: 200px;
+    }
+}
+@keyframes h-move {
+    0%{
+        left: -5px;
+    }
+    100%{
+        left: 300px;
+    }
+}
+.top, .bottom{
+    -webkit-animation-name: h-move;
+    animation-name: h-move;
+}
+@-webkit-keyframes v-move{
+    0%{
+        top: -5px;
+    }
+    100%{
+        top: 228px;
+    }
+}
+@keyframes v-move{
+    0%{
+        top: -5px;
+    }
+    100% {
+        top: 228px;
+    }
+}
+.right, .left{
+    -webkit-animation-name: v-move;
+    animation-name: v-move;
+}
+
+/* ---------------
+12:: News section
+------------------ */
+.block-title span{
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 3px 0px 6px 0px;
+    border-bottom: 5px solid #f7941d;
+    text-transform: uppercase;
+}
+/* ------------------
+13:: Gallery
+--------------------- */
+.gallery img{
+    width: 200px;
+    height: 200px;
+    object-fit: scale-down;
+}
+@media(max-width: 1268px){
+    .gallery img{
+        width: 150px;
+        height: 150px;
+        object-fit: scale-down;
+    }
+}
+
+/* -------------
+Footer
+----------------*/
+footer{
+    color: #fff;
+    background-color: #222;
+}
+footer ul{
+    list-style: none;
+}
+footer i.fas{
+    color: var(--success);
+}
+footer .mission i.fas{
+    color: #fff;
+}
+footer ul li{
+    padding: 3px;
+}
+.footer-block-title span{
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 3px 0px 6px 0px;
+    border-bottom: 3px solid var(--warning);
+    text-transform: uppercase;
+}
+footer .mission{
+    font-family: "Charm", Arial, sans-serif;
+}
+
+/* ---------------------
+Media query
+---------------------- */
+
+@media only screen and (max-width: 1200px) {
+    .welcome-thumb{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .lead.mission{
+        font-size: .98em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #ca-navbar {
+        padding: 30px;
+        border-radius: 3px;
+        background-color: #333;
+        text-align: left;
+    }
+    #ca-navbar .menu-item{
+        color: #fff;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    #ca-navbar{
+        padding: 20px;
+        border-radius: 3px;
+        background-color: #333;
+        text-align: left;
+    }
+    #ca-navbar .menu-item{
+        color: #fff;
+    }
+}
