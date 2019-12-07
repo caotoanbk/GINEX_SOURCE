@@ -39464,8 +39464,8 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Projects\GINEX_SOURCE\resources\assets\js\app.js */"./resources/assets/js/app.js");
-module.exports = __webpack_require__(/*! D:\Projects\GINEX_SOURCE\resources\assets\sass\app.scss */"./resources/assets/sass/app.scss");
+__webpack_require__(/*! E:\projects\GINEX_SOURCE\resources\assets\js\app.js */"./resources/assets/js/app.js");
+module.exports = __webpack_require__(/*! E:\projects\GINEX_SOURCE\resources\assets\sass\app.scss */"./resources/assets/sass/app.scss");
 
 
 /***/ })

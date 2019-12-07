@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         
-        <title>Pixivent cover</title>
+        <title>Ginex HR Data &AMP; Survey</title>
         <!-- Font awesome -->
         <script src="https://kit.fontawesome.com/26fdcedf55.js"></script>
         
@@ -48,7 +48,7 @@
                             <h2 class="letter-spacing">Bộ phận Số liệu &amp; Khảo sát Nhân sự</h2>
                             <h3>CÔNG TY CỔ PHẦN ĐẦU TƯ GINEX</h3>
                         </div>
-                        <a href="http://salary-survey.ginex.com.vn" target="_blank" class="btn submit-btn" style="width: 23% !important;"><i class="fas fa-arrow-right"></i> Khảo sát lương</a>
+                        <a href="/salary-survey" class="btn btn-info" style="width: 23% !important;"><i class="fas fa-arrow-right"></i> Khảo sát lương</a>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                                             <img src="./img/bg-img/2019-salary-survey.jpg" alt="" class="card-img-top img-fluid">
                                             <div class="card-body">
                                                 <h4>Khảo sát lương 2019</h4>
-                                                <a href="#" target="_blank" class="btn submit-btn ml-auto small-btn px-3">&rarr; Đăng ký tham gia</a>
+                                                <a href="#" target="_blank" class="btn submit-btn ml-auto small-btn px-3">&rarr; Chi tiết</a>
                                             </div>
                                         </div>
                                     </div>
