@@ -1,34 +1,3 @@
-/* --------------------
-Base CSS Start
-----------------------*/
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #fff;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    color: #000;
-    line-height: 1.5;
-    letter-spacing: .03rem;
-}
-
-/* .letter-spacing{
-    letter-spacing: -1px;
-} */
-
 img {
     max-width: 100%;
     max-height: 100%;
@@ -50,7 +19,8 @@ img {
     padding-bottom: 2rem;
 }
 .section-heading{
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .section-heading > h2{
     font-weight: 400;
@@ -132,19 +102,19 @@ Header Area CSS
 hover effect to link in header
 ------------------------------*/
 
-.menu_area .nav-link.menu-item { display: inline-block; position: relative; color: #797979;}
+.menu_area .nav-link.menu-item { display: inline-block; position: relative; color: #333;}
 .menu_area .nav-link.menu-item:hover { color: var(--warning);}
-.menu_area .nav-link.menu-item:before, .menu_area .nav-link.menu-item:after { content: ''; position: absolute; bottom: .5em; height: 3px; transition: all 0.3s cubic-bezier(0.15, 0.29, 0.42, 0.63); }
+.menu_area .nav-link.menu-item:before, .menu_area .nav-link.menu-item:after { content: ''; position: absolute; bottom: .5em; height: 3px; transition: all 0.1s cubic-bezier(0.15, 0.29, 0.42, 0.63); }
 
-.menu_area .nav-link.menu-item:hover:before, .menu_area .nav-link.menu-item:hover:after { transition: all 0.3s cubic-bezier(0.54, 0.38, 0.85, 0.54); }
+.menu_area .nav-link.menu-item:hover:before, .menu_area .nav-link.menu-item:hover:after { transition: all 0.1s cubic-bezier(0.54, 0.38, 0.85, 0.54); }
 
-.menu_area .nav-link.menu-item:before { left: .7em; right: 100%; border-top: 1px solid; }
+/* .menu_area .nav-link.menu-item:before { left: .7em; right: 100%; border-top: 1px solid; } */
 
-.menu_area .nav-link.menu-item:after { right: .7em; left: 100%; border-top: 1px solid; height: 2px; }
+/* .menu_area .nav-link.menu-item:after { right: .7em; left: 100%; border-top: 1px solid; height: 2px; } */
 
-.menu_area .nav-link.menu-item.current:before, .menu_area .nav-link.menu-item:hover:before { right: .7em; }
+/* .menu_area .nav-link.menu-item.current:before, .menu_area .nav-link.menu-item:hover:before { right: .7em; } */
 
-.menu_area .nav-link.menu-item.current:after, .menu_area .nav-link.menu-item:hover:after { left: .7em; }
+/* .menu_area .nav-link.menu-item.current:after, .menu_area .nav-link.menu-item:hover:after { left: .7em; } */
 
 .image-hover img{
     -webkit-transform: scale(1);
@@ -465,8 +435,9 @@ footer ul li{
     text-transform: uppercase;
 }
 footer .mission{
-    font-family: "Charm", Arial, sans-serif;
-    font-size: 18px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14.5px;
+    font-style: italic;
 }
 
 /* ---------------------

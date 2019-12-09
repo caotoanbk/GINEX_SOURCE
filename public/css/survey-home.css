@@ -1,0 +1,350 @@
+.carousel-control-next, .carousel-control-prev {
+    width: 4%;
+}
+.image-hover img{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.image-hover img:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px 5px #d9d9d987;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+.border-grey {
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+}
+header.masthead {
+    position: relative;
+    background-color: #343a40;
+    background: url("../img/ginex-salary-survey-welcome.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment:scroll;
+    padding-top: 11rem;
+    padding-bottom: 8rem;
+    box-shadow:.3px .3px 5px 1px #999;
+    height: 100vh;
+}
+header.masthead .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
+header.masthead h1 {
+    font-size: 2rem;
+}
+.showcase .showcase-text {
+    padding: 3rem;
+}
+.showcase .showcase-img {
+    min-height: 23rem;
+    background-size: cover;
+}
+.benefit {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+/*----------------------------
+Link in header
+------------------------------*/
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.7);
+}
+.nav-link.menu-item { display: inline-block; position: relative; color: #797979; padding-left: 0.5rem; padding-right: .5rem;}
+.nav-link.menu-item:hover { color: #4e8fd1 !important;}
+.nav-link.menu-item:before, .nav-link.menu-item:after { content: ''; position: absolute; bottom: .5em; height: 3px; transition: all 0.3s cubic-bezier(0.15, 0.29, 0.42, 0.63); }
+.nav-link.menu-item:hover:before, .nav-link.menu-item:hover:after { transition: all 0.3s cubic-bezier(0.54, 0.38, 0.85, 0.54); }
+.nav-link.menu-item:before { left: .5rem; right: 100%; border-top: 1px solid; }
+.nav-link.menu-item:after { right: .5rem; left: 100%; border-top: 1px solid; height: 2px; }
+
+.nav-link.menu-item.current:before, .nav-link.menu-item:hover:before { right: .5rem; }
+.nav-link.menu-item.current:after, .nav-link.menu-item:hover:after { left: .5rem; }
+
+/*------------------------
+button in header
+-------------------------*/
+
+.button{
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 10em;
+    border: 3px solid #4e8fd1;
+    text-align: center;
+    line-height: 1;
+    transition: all .25s;
+    padding:6px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+.button.button--slim{
+    border-width: 2px;
+}
+.button.button--ghost{
+    color: #4e8fd1;
+    border-color: #4e8fd1;
+    background: transparent;
+}
+.button:hover{
+    color: #fff;
+    border-collapse: #4e8fd1;
+    background: #4e8fd1;
+    text-decoration: none;
+}
+
+/*----------------------
+Log-in-form
+------------------------*/
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.form-signin .checkbox {
+    font-weight: 400;
+}
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/*--------------------------
+modify bootstrap navigation
+---------------------------*/
+
+nav a.link{
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .1s ease-in;
+    font-size: 80%;
+    border-radius: .25rem;
+}
+nav a.link:hover{
+    background-color: #007bff;
+    color: #fff;
+}
+nav.navbar{
+    box-shadow:.3px .3px 5px 1px #999;
+    padding: .35em 0em;
+}
+/* ------------------
+Page section
+--------------------*/
+
+.page-section {
+    padding: 3.5rem 0;
+}
+
+.text-white {
+    color: #fff!important;
+}
+
+/* ------------------
+Footer
+--------------------*/
+
+footer{
+    color: #fff;
+    background-color: #222;
+}
+footer ul{
+    list-style: none;
+}
+footer i.fas{
+    color: var(--success);
+}
+footer .mission i.fas{
+    color: #fff;
+}
+footer ul li{
+    padding: 3px;
+}
+.footer-block-title span{
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 3px 0px 6px 0px;
+    border-bottom: 3px solid var(--warning);
+    text-transform: uppercase;
+}
+footer .mission{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14.5px;
+}
+
+/* ----------------------
+custom form
+-----------------------*/
+
+form.ticksy-form .field{
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 14px;
+    line-height: 35px;
+    height: 35px;
+    padding: 0px 53px 0px 10px;
+    color: #333;
+}
+.ticksy-form p {
+    position: relative;
+    margin-bottom: 0px;
+}
+form.ticksy-form p .required{
+    color: #E85E3C;
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 10px;
+    line-height: 1;
+}
+
+/*------------------------
+pricing
+------------------------*/
+
+.pricingTable{
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+    transition: all .3s ease 0s;
+}
+.pricingTable:hover{
+    margin-top: -20px;
+}
+.pricingTable > .pricingTable-header{
+    color: #fff;
+}
+.pricingTable-header > .heading{
+    background: #727cb6;
+    display: block;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+.heading > h3{
+    text-transform: capitalize;
+    margin: 0;
+}
+.pricingTable-header > .price-value{
+    padding: 2px;
+    background: #5f6795;
+    display: block;
+    font-size: 32px;
+}
+.pricingTable:hover .price-value > .price,
+.pricingTable .price-value > .mo{
+    display: none;
+}
+.pricingTable:hover .price-value > .mo{
+    display: block;
+}
+.pricingTable > .pricingContent{
+    margin-top: 5px;
+}
+.pricingContent > ul{
+    padding: 0;
+    list-style: none;
+    margin-bottom: 5px;
+}
+.pricingContent > ul > li{
+    padding: 8px 20px;
+    border-bottom: 1px solid #dddddd;
+}
+.pricingContent > ul > li:nth-child(odd){
+    background: #ECF0F1;
+}
+.pricingTable > .pricingTable-sign-up{
+    padding: 15px 0;
+    border: 1px solid #ecf0f1;
+}
+.pricingTable-sign-up > .btn-block{
+    width: 80%;
+    margin: 0 auto;
+    background: #727cb6;
+    border: 0px none;
+    color:#fff;
+    text-transform: capitalize;
+    font-weight: bold;
+    border-radius: 0px;
+}
+.pricingTable-sign-up > .btn-block:hover{
+    background: #5f6795;
+    color:#fff;
+}
+.blue .heading,.blue .btn-block{
+    background: #3498db;
+}
+.blue .price-value,.blue .btn-block:hover{
+    background: #3480b7;
+}
+.pink .heading,.pink .btn-block{
+    background: #ed687c;
+}
+.pink .price-value,.pink .btn-block:hover{
+    background: #bb5163;
+}
+.yellow .heading,.yellow .btn-block{
+    background: #28a745;
+}
+.yellow .price-value,.yellow .btn-block:hover{
+    background: #218838;
+}
+@media only screen and (max-width: 768px){
+    .pricingTable{
+        margin-bottom: 80px;
+    }
+}
+
+/*-------------------
+responsive
+--------------------*/
+
+@media (min-width: 768px) {
+    header.masthead {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+    header.masthead h1 {
+        font-size: 3rem;
+    }
+}
+@media (min-width: 768px) {
+    .showcase .showcase-text {
+        padding: 3rem;
+    }
+}
+@media screen and (max-width: 768px){
+    #welcome-heading{
+        font-size: 18px;
+    }
+}

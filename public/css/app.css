@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Montserrat:400,500,700|Charm|Roboto);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Montserrat:400,500,700|Muli:300,400,700|Roboto);@charset "UTF-8";
 
 /*!
  * animate.css -https://daneden.github.io/animate.css/
@@ -15329,5 +15329,50 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+/* --------------------
+Base CSS
+----------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  width: 90% !important;
+}
+
+.p-150 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.p-50 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
 }
 

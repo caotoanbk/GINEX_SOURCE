@@ -65,59 +65,56 @@
                                 <h2>Dịch vụ của chúng tôi</h2>
                             </div>
                         </div>
-                        <div class="col-md-8 col-12 text-center image-hover">
+                        <div class="col-md-8 col-12 image-hover">
                             <div class="row">
                                 <div class="col-md-6 col-12 mb-4">
-                                    <div class="card text-white border-0 box-shadow-0 h-100">
+                                    <div class="card border-0 box-shadow-0 h-100">
                                         <div class="card-content">
                                             <img src="./img/bg-img/2019-salary-survey.jpg" alt="" class="card-img-top img-fluid">
                                             <div class="card-body">
-                                                <h4>Khảo sát lương 2019</h4>
-                                                <a href="#" target="_blank" class="btn submit-btn ml-auto small-btn px-3">&rarr; Chi tiết</a>
+                                                <a href="#" class="h5 text-dark">Khảo sát lương 2019</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12 mb-4">
-                                    <div class="card text-white border-0 box-shadow-0 h-100">
+                                    <div class="card border-0 box-shadow-0 h-100">
                                         <div class="card-content">
                                             <img src="./img/bg-img/workers.jpg" alt="" class="card-img-top img-fluid">
                                             <div class="card-body">
-                                                <h4>Khảo sát nhu cầu người lao động</h4>
+                                                <a href="#" class="h5 text-dark">Khảo sát nhu cầu người lao động</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12 mb-4 mb-md-0">
-                                    <div class="card text-white border-0 box-shadow-0 h-100">
+                                    <div class="card border-0 box-shadow-0 h-100">
                                         <div class="card-content">
                                             <img src="./img/bg-img/jobs.jpg" alt="" class="card-img-top img-fluid">
                                             <div class="card-body">
-                                                <h4>Ứng viên gửi CV tìm cơ hội việc làm</h4>
+                                                <a href="#" class="h5 text-dark">Ứng viên gửi CV tìm cơ hội việc làm</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12 mb-4 mb-md-0">
-                                    <div class="card text-white border-0 box-shadow-0 h-100">
+                                    <div class="card border-0 box-shadow-0 h-100">
                                         <div class="card-content">
                                             <img src="./img/bg-img/training.png" alt="" class="card-img-top img-fluid">
                                             <div class="card-body">
-                                                <h4>Khảo sát nhu cầu đào tạo &amp; hội thảo</h4>
+                                                <a href="#" class="h5 text-dark">Khảo sát nhu cầu đào tạo &amp; hội thảo</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-12 text-center text-white" style="">
+                        <div class="col-md-4 col-12 text-white">
                             <div class="card h-100">
                                 <div class="card-content" style="min-height: 400px;">
                                     <div class="card-img-overlay overlay-blue d-flex align-items-center p-4 justify-content-center">
                                         <div>
-                                            <h4 class="text-white">Thông tin các khóa đào tạo 2019</h4>
-                                            <hr>
-                                            <a href="#" class="btn submit-btn">&rarr; Đăng ký tham gia</a>
+                                            <a href="#" class="h4 text-white">Thông tin các khóa đào tạo 2019</a>
                                         </div>
                                     </div>
                                 </div>
