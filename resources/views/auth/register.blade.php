@@ -94,7 +94,7 @@ $arr_quy_mo = ["Dưới 10 người" => "Dưới 10 người", "Từ 10 đến d
                                         <div class="row">
                                             <div class="col-md-4 mb-1">
                                                 <label for="city">Tỉnh, thành phố</label>
-                                                    {!! Form::select('city', $arr_citys, old('city'), ['placeholder' => 'Chọn...', 'class' => 'form-control', 'id' => 'city_id_signup', 'required']) !!}
+                                                    {!! Form::select('city', $arr_citys, old('city'), ['placeholder' => 'Vui lòng chọn', 'class' => 'form-control', 'id' => 'city_id_signup', 'required']) !!}
                                                 <div class="invalid-feedback{{ $errors->has('city') ? ' d-block' : '' }}">
                                                     {{ $errors->first('city') }}
                                                 </div>
@@ -102,7 +102,7 @@ $arr_quy_mo = ["Dưới 10 người" => "Dưới 10 người", "Từ 10 đến d
                                             <div class="col-md-4 mb-1">
                                                 <label for="district">Quận huyện</label>
                                                 <select class="form-control" name="district" value="{{ old('district') }}" required id="district_id_signup">
-                                                    <option value="">Chọn...</option>
+                                                    <option value="">Vui lòng chọn</option>
                                                 </select>
                                                 <div class="invalid-feedback{{ $errors->has('district') ? ' d-block' : '' }}">
                                                     {{ $errors->first('district') }}
@@ -127,7 +127,7 @@ $arr_quy_mo = ["Dưới 10 người" => "Dưới 10 người", "Từ 10 đến d
                                             </div>
                                             <div class="col-md-4 mb-2">
                                                 <label for="nationality">Quốc tịch</label>
-                                                {!! Form::select('nationality', $arr_nations, old('nationality'), ['placeholder' => 'Chọn...', 'class' => 'form-control', 'id' => '', 'required']) !!}
+                                                {!! Form::select('nationality', $arr_nations, old('nationality'), ['placeholder' => 'Vui lòng chọn', 'class' => 'form-control', 'id' => '', 'required']) !!}
                                                 <div class="invalid-feedback{{ $errors->has('nationality') ? ' d-block' : '' }}">
                                                     {{ $errors->first('nationality') }}
                                                 </div>
@@ -135,7 +135,7 @@ $arr_quy_mo = ["Dưới 10 người" => "Dưới 10 người", "Từ 10 đến d
                                             <div class="col-md-4 mb-2">
                                                 <label for="linh_vuc">Lĩnh vực hoạt động</label>
                                                 <select class="form-control" name="linh_vuc" value="{{ old('linh_vuc') }}" required>
-                                                    <option value="">Chọn...</option>
+                                                    <option value="">Vui lòng chọn</option>
                                                     <option value="Sản xuất">Sản xuất</option>
                                                     <option value="Thương mại">Thương mại</option>
                                                     <option value="Dịch vụ">Dịch vụ</option>
@@ -146,7 +146,7 @@ $arr_quy_mo = ["Dưới 10 người" => "Dưới 10 người", "Từ 10 đến d
                                             </div>
                                             <div class="col-md-4 mb-1">
                                                 <label for="nganh_cn">Ngành công nghiệp</label>
-                                                {!! Form::select('nganh_cn', $arr_nganh_cn, old('nganh_cn'), ['placeholder' => 'Chọn...', 'class' => 'form-control', 'id' => '', 'required']) !!}
+                                                {!! Form::select('nganh_cn', $arr_nganh_cn, old('nganh_cn'), ['placeholder' => 'Vui lòng chọn', 'class' => 'form-control', 'id' => '', 'required']) !!}
                                                 <div class="invalid-feedback{{ $errors->has('nganh_cn') ? ' d-block' : '' }}">
                                                     {{ $errors->first('nganh_cn') }}
                                                 </div>
@@ -154,14 +154,14 @@ $arr_quy_mo = ["Dưới 10 người" => "Dưới 10 người", "Từ 10 đến d
 
                                             <div class="col-md-4 mb-1">
                                                 <label for="nam_hd">Số năm hoạt động tại VN</label>
-                                                {!! Form::select('nam_hd', $arr_nam_hd, old('nam_hd'), ['placeholder' => 'Chọn...', 'class' => 'form-control', 'id' => '', 'required']) !!}
+                                                {!! Form::select('nam_hd', $arr_nam_hd, old('nam_hd'), ['placeholder' => 'Vui lòng chọn', 'class' => 'form-control', 'id' => '', 'required']) !!}
                                                 <div class="invalid-feedback{{ $errors->has('nam_hd') ? ' d-block' : '' }}">
                                                     {{ $errors->first('nam_hd') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-1">
                                                 <label for="quy_mo">Quy mô nhân sự (người)</label>
-                                                {!! Form::select('quy_mo', $arr_quy_mo, old('quy_mo'), ['placeholder' => 'Chọn...', 'class' => 'form-control', 'id' => '', 'required']) !!}
+                                                {!! Form::select('quy_mo', $arr_quy_mo, old('quy_mo'), ['placeholder' => 'Vui lòng chọn', 'class' => 'form-control', 'id' => '', 'required']) !!}
                                                 <div class="invalid-feedback{{ $errors->has('quy_mo') ? ' d-block' : '' }}">
                                                     {{ $errors->first('quy_mo') }}
                                                 </div>
