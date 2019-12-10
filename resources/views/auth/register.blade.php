@@ -15,10 +15,10 @@ $arr_quy_mo = ["Dưới 10 người" => "Dưới 10 người", "Từ 10 đến d
 <div class="container">
                         <form method="post" action="/register" name="form_register" id="form_register" class="ticksy-form">
                       {{ csrf_field() }}
-                        <h5 class="text-center font-weight-bold" style="text-decoration: underline;">REGISTER</h5>
+                        <h4 class="text-center font-weight-bold">REGISTER</h4>
                         <div class="row">
-                            <div class="col-12">
-                                <h5 class="text-secondary">1. Thông tin tài khoản</h5>
+                            {{-- <div class="col-12"> --}}
+                                {{-- <h5 class="text-secondary">1. Thông tin tài khoản</h5>
                           <ul class="list-group pt-1">
                               <li class="list-group-item d-flex" style="">
                                 <div>
@@ -56,181 +56,167 @@ $arr_quy_mo = ["Dưới 10 người" => "Dưới 10 người", "Từ 10 đến d
                               </li>
                           </ul>
                           
-                            </div>
+                            </div> --}}
                         <div class="col-12">
-                          <h5 class="text-secondary pt-1">2. Thông tin công ty</h5>
                           <div class="pt-1">
-                              <div class="card" style="border-color: rgba(0,0,0,0.125)">
+                              <div class="card border-primary">
                                   <div class="card-body">
                                       <div class="container">
-                                        <h6 class="mb-1 text-warning font-weight-normal">Tên công ty</h6>
+                                        <h6 class="mb-1 text-warning font-weight-bold">1. Tên công ty</h6>
 
                                         <div class="row">
                                             <div class="col-md-4 mb-1">
                                                 <label for="full_name">Tên đầy đủ</label>
-                                                <p>
-                                                    <input type="text" class="field" name="full_name" value="{{ old('full_name') }}" required>
-                                                    <span class="required"><i class="fa fa-asterisk"></i></span>
-                                                </p>
+                                                <input type="text" class="form-control" name="full_name" value="{{ old('full_name') }}" required>
+
                                                 <div class="invalid-feedback{{ $errors->has('full_name') ? ' d-block' : '' }}">
                                                     {{ $errors->first('full_name') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-1">
                                                 <label for="abbr_name">Tên viết tắt</label>
-                                                <p>
-                                                    <input type="text" class="field" name="abbr_name" value="{{ old('abbr_name') }}" required>
-                                                    <span class="required"><i class="fa fa-asterisk"></i></span>
-                                                </p>
+
+                                                <input type="text" class="form-control" name="abbr_name" value="{{ old('abbr_name') }}" required>
+
                                                 <div class="invalid-feedback{{ $errors->has('abbr_name') ? ' d-block' : '' }}">
                                                     {{ $errors->first('abbr_name') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-1">
                                                 <label for="san_pham">Sản phẩm</label>
-                                                <p>
-                                                    <input type="text" class="field" name="san_pham" value="{{ old('san_pham') }}" required>
-                                                    <span class="required"><i class="fa fa-asterisk"></i></span>
-                                                </p>
+                                                <input type="text" class="form-control" name="san_pham" value="{{ old('san_pham') }}" required>
                                                 <div class="invalid-feedback{{ $errors->has('san_pham') ? ' d-block' : '' }}">
                                                     {{ $errors->first('san_pham') }}
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr class="mb-3">
-                                        <h6 class="text-warning font-weight-normal">Địa chỉ đăng ký kinh doanh</h6>
+                                        <h6 class="text-warning font-weight-bold pt-1">2. Địa chỉ đăng ký kinh doanh</h6>
                                         <div class="row">
                                             <div class="col-md-4 mb-1">
-                                                <label for="city">Thành phố hoặc tỉnh</label>
-                                                <p>
-                                                    {!! Form::select('city', $arr_citys, old('city'), ['placeholder' => 'Chọn...', 'class' => 'field', 'id' => 'city_id_signup', 'required']) !!}
-                                                    <span class="required"><i class="fa fa-asterisk"></i></span>
-                                                </p>
+                                                <label for="city">Tỉnh, thành phố</label>
+                                                    {!! Form::select('city', $arr_citys, old('city'), ['placeholder' => 'Chọn...', 'class' => 'form-control', 'id' => 'city_id_signup', 'required']) !!}
                                                 <div class="invalid-feedback{{ $errors->has('city') ? ' d-block' : '' }}">
                                                     {{ $errors->first('city') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-1">
                                                 <label for="district">Quận huyện</label>
-                                                <p>
-                                                    <select class="field" name="district" value="{{ old('district') }}" required id="district_id_signup">
-                                                        <option value="">Chọn...</option>
-                                                    </select>
-                                                    <span class="required"><i class="fa fa-asterisk"></i></span>
-                                                </p>
+                                                <select class="form-control" name="district" value="{{ old('district') }}" required id="district_id_signup">
+                                                    <option value="">Chọn...</option>
+                                                </select>
                                                 <div class="invalid-feedback{{ $errors->has('district') ? ' d-block' : '' }}">
                                                     {{ $errors->first('district') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-1">
                                                 <label for="industry_zone">Khu công nghiệp</label>
-                                                <input type="text" class="field" name="industry_zone" value="{{ old('industry_zone') }}" required>
+                                                <input type="text" class="form-control" name="industry_zone" value="{{ old('industry_zone') }}" required>
                                                 <div class="invalid-feedback{{ $errors->has('industry_zone') ? ' d-block' : '' }}">
                                                     {{ $errors->first('industry_zone') }}
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr class="mb-3">
 
                                         <div class="row">
                                             <div class="col-md-4 mb-2">
                                                 <label for="tax_code">Mã số thuế</label>
-                                                <p>
-                                                    <input type="text" class="field" name="tax_code" value="{{ old('tax_code') }}" required>
-                                                    <span class="required"><i class="fa fa-asterisk"></i></span>
-                                                </p>
+                                                <input type="text" class="form-control" name="tax_code" value="{{ old('tax_code') }}" required>
                                                 <div class="invalid-feedback{{ $errors->has('tax_code') ? ' d-block' : '' }}">
                                                     {{ $errors->first('tax_code') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-2">
                                                 <label for="nationality">Quốc tịch</label>
-                                                <p>
-                                                    {!! Form::select('nationality', $arr_nations, old('nationality'), ['placeholder' => 'Chọn...', 'class' => 'field', 'id' => '', 'required']) !!}
-                                                    <span class="required"><i class="fa fa-asterisk"></i></span>
-                                                </p>
+                                                {!! Form::select('nationality', $arr_nations, old('nationality'), ['placeholder' => 'Chọn...', 'class' => 'form-control', 'id' => '', 'required']) !!}
                                                 <div class="invalid-feedback{{ $errors->has('nationality') ? ' d-block' : '' }}">
                                                     {{ $errors->first('nationality') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-2">
                                                 <label for="linh_vuc">Lĩnh vực hoạt động</label>
-                                                <p>
-                                                    <select class="form-control" name="linh_vuc" value="{{ old('linh_vuc') }}" required>
-                                                        <option value="">Chọn...</option>
-                                                        <option value="Sản xuất">Sản xuất</option>
-                                                        <option value="Thương mại">Thương mại</option>
-                                                        <option value="Dịch vụ">Dịch vụ</option>
-                                                    </select>
-                                                    <span class="required"><i class="fa fa-asterisk"></i></span>
-                                                </p>
+                                                <select class="form-control" name="linh_vuc" value="{{ old('linh_vuc') }}" required>
+                                                    <option value="">Chọn...</option>
+                                                    <option value="Sản xuất">Sản xuất</option>
+                                                    <option value="Thương mại">Thương mại</option>
+                                                    <option value="Dịch vụ">Dịch vụ</option>
+                                                </select>
                                                 <div class="invalid-feedback{{ $errors->has('linh_vuc') ? ' d-block' : '' }}">
                                                     {{ $errors->first('linh_vuc') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-1">
                                                 <label for="nganh_cn">Ngành công nghiệp</label>
-                                                <p>
-                                                    {!! Form::select('nganh_cn', $arr_nganh_cn, old('nganh_cn'), ['placeholder' => 'Chọn...', 'class' => 'field', 'id' => '', 'required']) !!}
-                                                    <span class="required"><i class="fa fa-asterisk"></i></span>
-                                                </p>
+                                                {!! Form::select('nganh_cn', $arr_nganh_cn, old('nganh_cn'), ['placeholder' => 'Chọn...', 'class' => 'form-control', 'id' => '', 'required']) !!}
                                                 <div class="invalid-feedback{{ $errors->has('nganh_cn') ? ' d-block' : '' }}">
                                                     {{ $errors->first('nganh_cn') }}
                                                 </div>
                                             </div>
 
                                             <div class="col-md-4 mb-1">
-                                                <label for="nam_hd">Số năm HĐ tại VN</label>
-                                                <p>
-                                                    {!! Form::select('nam_hd', $arr_nam_hd, old('nam_hd'), ['placeholder' => 'Chọn...', 'class' => 'field', 'id' => '', 'required']) !!}
-                                                    <span class="required"><i class="fa fa-asterisk"></i></span>
-                                                </p>
+                                                <label for="nam_hd">Số năm hoạt động tại VN</label>
+                                                {!! Form::select('nam_hd', $arr_nam_hd, old('nam_hd'), ['placeholder' => 'Chọn...', 'class' => 'form-control', 'id' => '', 'required']) !!}
                                                 <div class="invalid-feedback{{ $errors->has('nam_hd') ? ' d-block' : '' }}">
                                                     {{ $errors->first('nam_hd') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-1">
-                                                <label for="quy_mo">Quy mô NS (người)</label>
-                                                <p>
-                                                    {!! Form::select('quy_mo', $arr_quy_mo, old('quy_mo'), ['placeholder' => 'Chọn...', 'class' => 'field', 'id' => '', 'required']) !!}
-                                                    <span class="required"><i class="fa fa-asterisk"></i></span>
-                                                </p>
+                                                <label for="quy_mo">Quy mô nhân sự (người)</label>
+                                                {!! Form::select('quy_mo', $arr_quy_mo, old('quy_mo'), ['placeholder' => 'Chọn...', 'class' => 'form-control', 'id' => '', 'required']) !!}
                                                 <div class="invalid-feedback{{ $errors->has('quy_mo') ? ' d-block' : '' }}">
                                                     {{ $errors->first('quy_mo') }}
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr class="mb-3">
 
-                                        <h6 class="mb-1 text-warning font-weight-normal">Thông tin người liên hệ</h6>
+                                        <h6 class="text-warning font-weight-bold py-1 mb-0">3. Thông tin người liên hệ</h6>
                                         <div class="row">
-                                            <div class="col-md-3 mb-1">
+                                            <div class="col-md-4 mb-1">
                                                 <label for="contact_person_name">Họ tên</label>
-                                                <input type="text" class="field" name="contact_person_name" value="{{ old('contact_person_name') }}" required>
+                                                <input type="text" class="form-control" name="contact_person_name" value="{{ old('contact_person_name') }}" required>
                                                 <div class="invalid-feedback{{ $errors->has('contact_person_name') ? ' d-block' : '' }}">
                                                     {{ $errors->first('contact_person_name') }}
                                                 </div>
                                             </div>
-                                            <div class="col-md-3 mb-1">
+                                            <div class="col-md-4 mb-1">
                                                 <label for="contact_person_position">Chức vụ</label>
-                                                <input type="text" class="field" name="contact_person_position" value="{{ old('contact_person_position') }}" >
+                                                <input type="text" class="form-control" name="contact_person_position" value="{{ old('contact_person_position') }}" >
                                                 <div class="invalid-feedback{{ $errors->has('contact_person_position') ? ' d-block' : '' }}">
                                                     {{ $errors->first('contact_person_position') }}
                                                 </div>
                                             </div>
-                                            <div class="col-md-3 mb-1">
+                                            <div class="col-md-4 mb-1">
                                                 <label for="contact_person_mobile">Điện thoại</label>
-                                                <input type="text" class="field" name="contact_person_mobile" value="{{ old('contact_person_mobile') }}" >
+                                                <input type="text" class="form-control" name="contact_person_mobile" value="{{ old('contact_person_mobile') }}" >
                                                 <div class="invalid-feedback{{ $errors->has('contact_person_mobile') ? ' d-block' : '' }}">
                                                     {{ $errors->first('contact_person_mobile') }}
                                                 </div>
                                             </div>
-                                            <div class="col-md-3 mb-1">
-                                                <label for="contact_person_email">Email</label>
-                                                <input type="text" class="form-control" name="contact_person_email" value="{{ old('contact_person_email') }}" >
-                                                <div class="invalid-feedback{{ $errors->has('contact_person_email') ? ' d-block' : '' }}">
-                                                    {{ $errors->first('contact_person_email') }}
+                                        </div>
+                                        <h6 class="text-warning font-weight-bold pb-1 mb-0">4. Thông tin tài khoản</h6>
+                                        <div class="row">
+                                            <div class="col-md-4 mb-1">
+                                                <label for="contact_person_name">Email</label>
+                                                <input type="text" class="form-control" name="contact_person_name" value="{{ old('contact_person_name') }}" required>
+                                                <div class="invalid-feedback{{ $errors->has('contact_person_name') ? ' d-block' : '' }}">
+                                                    {{ $errors->first('contact_person_name') }}
                                                 </div>
+                                            </div>
+                                            <div class="col-md-4 mb-1">
+                                                <label for="contact_person_position">Password</label>
+                                                <input type="text" class="form-control" name="contact_person_position" value="{{ old('contact_person_position') }}" >
+                                                <div class="invalid-feedback{{ $errors->has('contact_person_position') ? ' d-block' : '' }}">
+                                                    {{ $errors->first('contact_person_position') }}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-1">
+                                                <label for="contact_person_mobile">Confirm Password</label>
+                                                <input type="text" class="form-control" name="contact_person_mobile" value="{{ old('contact_person_mobile') }}" >
+                                                <div class="invalid-feedback{{ $errors->has('contact_person_mobile') ? ' d-block' : '' }}">
+                                                    {{ $errors->first('contact_person_mobile') }}
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn w-25 btn-primary mx-auto mt-2 float-right" name="btn_register"><i class="fa fa-arrow-right"></i>&nbsp;đăng ký</button>
                                             </div>
                                         </div>
                                       </div>
@@ -238,9 +224,6 @@ $arr_quy_mo = ["Dưới 10 người" => "Dưới 10 người", "Từ 10 đến d
                               </div>
                           </div>
                           
-                      </div>
-                      <div class="col-12">
-                          <button class="btn w-25 btn-primary mx-auto mt-2 float-right" name="btn_register"><i class="fa fa-arrow-right"></i>&nbsp;đăng ký</button>
                       </div>
                         </div>
 
