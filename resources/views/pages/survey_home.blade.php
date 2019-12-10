@@ -41,8 +41,9 @@
                 <div class="collapse navbar-collapse" id="nav">
                     <ul class="navbar-nav ml-auto">
                         {{-- @if(!\Auth::check()) --}}
-                        <li class="nav-item"><a href="#benefit" class="nav-link menu-item">Đăng ký</a></li>
-                        <li class="nav-item ml-0 ml-lg-4 d-md-flex" style="justify-content: center; align-items: center;"><button class="button button--ghost button--slim" data-toggle="modal" data-target="#myModal" style="min-width: 120px; outline: none;"><i class="fa fa-sign-in-alt"></i>&nbsp;&nbsp;Đăng nhập</button></li>
+                        <li class="nav-item"><a href="/" class="nav-link menu-item">Trang chủ</a></li>
+                        <li class="nav-item"><a href="/register" class="nav-link menu-item">Đăng ký</a></li>
+                        <li class="nav-item ml-2"><a href="/login" class="btn btn-outline-primary">Đăng nhập</a></li>
                       {{-- @else
                         <li class="nav-item"><a href="/phuc-loi" class="nav-link menu-item">Chế độ phúc lợi</a></li>
                         <li class="nav-item"><a href="/thong-tin-luong" class="nav-link menu-item">Chế độ lương</a></li>
@@ -91,8 +92,8 @@
             <div class="container-fluid">
                 <div class="row d-flex align-items-center justify-content-center">
                     <div class=""><img src="./img/idea.png" alt="" class=""></div>
-                    <h2 class="text-secondary m-0 p-0 text-left pl-3 col-8 col-md-5">Lợi ích của việc tham gia 
-                        khảo sát tiền lương 2019 !!!</h2>
+                    <h2 style="max-width: 500px;" class="text-secondary d-inline-block m-0 p-0 text-left pl-3 col-8 col-md-5">Lợi ích của việc tham gia 
+                        <br>khảo sát tiền lương 2019 !!!</h2>
                 </div>
                 <br>
                 <!-- Carousel -->
@@ -148,29 +149,25 @@
                             </div>
                             <p>Biểu đồ minh họa số liệu được tổng hợp</p>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-12 mt-4 text-center image-hover wow fadeInDown show-image" style="visibility: visible; animation-name: fadeInDown;">
+                        <div class="col-md-3 col-sm-6 col-12 my-4 text-center image-hover wow fadeInDown show-image" style="visibility: visible; animation-name: fadeInDown;">
                             <div class="bg-black">
                                 <img class="border-grey w-100 h-auto" src="img/demo/5.jpg" alt="Apps Image">
                             </div>
-                            <p class="mt-4 mb-0">Result 1</p>
                         </div>
                         <div class="col-md-3 col-sm-6 col-12 mt-4 text-center image-hover wow fadeInDown show-image" style="visibility: visible; animation-name: fadeInDown;">
                             <div class="bg-black">
                                 <img class="border-grey w-100 h-auto" src="img/demo/3.jpg" alt="Apps Image">
                             </div>
-                            <p class="mt-4 mb-0">Result 2</p>
                         </div>                        
                         <div class="col-md-3 col-sm-6 col-12 mt-4 text-center image-hover wow fadeInDown show-image" style="visibility: visible; animation-name: fadeInDown;">
                             <div class="bg-black">
                                 <img class="border-grey w-100 h-auto" src="img/demo/1.jpg" alt="Apps Image">
                             </div>
-                            <p class="mt-4 mb-0">Result 5</p>
                         </div>
                         <div class="col-md-3 col-sm-6 col-12 mt-4 text-center image-hover wow fadeInDown show-image" style="visibility: visible; animation-name: fadeInDown;">
                             <div class="bg-black">
                                 <img class="border-grey w-100 h-auto" src="img/demo/6.jpg" alt="Apps Image">
                             </div>
-                            <p class="mt-4 mb-0">Result 6</p>
                         </div>
 
                     </div>
@@ -179,7 +176,7 @@
         </section>
         <!-- end section demo -->
         <!-- section pricing -->
-        <section class="pricing bg-light" id="package" style="padding-bottom: 4rem; padding-top: 3rem;">
+        <section class="pricing bg-light pt-4" id="package" style="padding-bottom: 4rem;">
             <div class="container-fluid">
                 <div class="row d-flex justify-content-center">
                     <div class="col-12">

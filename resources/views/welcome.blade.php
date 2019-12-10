@@ -19,7 +19,7 @@
                 <div class="row">
                     <!-- Menu Area Start -->
                     <div class="col-12">
-                        <div class="menu_area py-2">
+                        <div class="menu_area">
                             <nav class="navbar navbar-expand-lg navbar-light">
                                 <!-- Logo -->
                                 <img src="img/logo-survey.png" class="img-fluid logo-width">
@@ -80,7 +80,7 @@
                                 <div class="col-md-6 col-12 mb-4">
                                     <div class="card border-0 box-shadow-0 h-100">
                                         <div class="card-content">
-                                            <img src="./img/bg-img/workers.jpg" alt="" class="card-img-top img-fluid">
+                                            <img src="./img/bg-img/workers.jpg" alt="" class="card-img-top img-fluid" style="border-bottom: 1px solid rgba(51,102,255,0.1)">
                                             <div class="card-body">
                                                 <a href="#" class="h5 text-dark">Khảo sát nhu cầu người lao động</a>
                                             </div>
@@ -100,7 +100,7 @@
                                 <div class="col-md-6 col-12 mb-4 mb-md-0">
                                     <div class="card border-0 box-shadow-0 h-100">
                                         <div class="card-content">
-                                            <img src="./img/bg-img/training.png" alt="" class="card-img-top img-fluid">
+                                            <img src="./img/bg-img/training.png" alt="" class="card-img-top img-fluid" style="border-bottom: 1px solid rgba(51,102,255,0.1)">
                                             <div class="card-body">
                                                 <a href="#" class="h5 text-dark">Khảo sát nhu cầu đào tạo &amp; hội thảo</a>
                                             </div>
