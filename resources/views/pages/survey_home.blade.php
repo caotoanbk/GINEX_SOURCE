@@ -43,7 +43,7 @@
                         {{-- @if(!\Auth::check()) --}}
                         <li class="nav-item"><a href="/" class="nav-link menu-item">Trang chủ</a></li>
                         <li class="nav-item"><a href="/register" class="nav-link menu-item">Đăng ký</a></li>
-                        <li class="nav-item ml-2"><a href="/login" class="btn btn-outline-primary">Đăng nhập</a></li>
+                        <li class="nav-item ml-2 d-flex" style="align-items:center"><a href="/login" class="btn btn-primary text-center" style="border-radius:10em;min-width:105px;padding-top:2px;padding-bottom:2px;">Đăng nhập</a></li>
                       {{-- @else
                         <li class="nav-item"><a href="/phuc-loi" class="nav-link menu-item">Chế độ phúc lợi</a></li>
                         <li class="nav-item"><a href="/thong-tin-luong" class="nav-link menu-item">Chế độ lương</a></li>
