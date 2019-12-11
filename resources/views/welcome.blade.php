@@ -22,7 +22,7 @@
                         <div class="menu_area">
                             <nav class="navbar navbar-expand-lg navbar-light">
                                 <!-- Logo -->
-                                <img src="img/logo-survey.png" class="img-fluid logo-width">
+                                <img src="/img/ginex-survey-hr-data.svg" class="img-fluid logo-width">
                                 <button class="navbar-toggler" style="outline: none;" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                                 <!-- Menu Area -->
                                 <div class="collapse navbar-collapse" id="ca-navbar">
