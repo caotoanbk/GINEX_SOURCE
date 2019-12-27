@@ -109,7 +109,7 @@
                         <div class="col-md-4 col-12 text-white">
                             <div class="card h-100">
                                 <div class="card-content" style="min-height: 400px;">
-                                    <div class="card-img-overlay overlay-blue d-flex align-items-center p-4 justify-content-center">
+                                    <div class="card-img-overlay overlay-orange d-flex align-items-center p-4 justify-content-center">
                                         <div>
                                             <a href="#" class="h4 text-white">Thông tin các khóa đào tạo 2019</a>
                                         </div>

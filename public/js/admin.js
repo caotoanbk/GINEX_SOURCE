@@ -52372,7 +52372,7 @@ __webpack_require__(/*! admin-lte/dist/js/adminlte */ "./node_modules/admin-lte/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Projects\GINEX_SOURCE\resources\assets\js\admin.js */"./resources/assets/js/admin.js");
+module.exports = __webpack_require__(/*! E:\projects\GINEX_SOURCE\resources\assets\js\admin.js */"./resources/assets/js/admin.js");
 
 
 /***/ })

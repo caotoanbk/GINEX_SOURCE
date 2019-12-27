@@ -35,8 +35,10 @@ img {
     background-color: #fff;
 }
 .overlay-blue {
-    background: #2196F3;
     background: rgba(33,150,243,.8);
+}
+.overlay-orange {
+    background: #ffbf00;
 }
 
 .card{
