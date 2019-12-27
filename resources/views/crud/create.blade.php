@@ -35,7 +35,7 @@
             ?>
             <div class="col-xs-12 col-sm-6">
                 <div class="form-group">
-                    <strong>{{convertColumnNameToString($key)}}:</strong>
+                    <strong>{{convertColumnNameToString($key)}} <sup class="text-danger">*</sup></strong>
                     {!! Form::select($key, ${'items'.$loop}, null,['class' => 'form-control', 'placeholder' => 'select..', 'data-live-search' => 'true'] ) !!}
                 </div>
             </div>
@@ -72,7 +72,7 @@
 
             <div class="col-xs-12 col-sm-6">
                 <div class="form-group">
-                    <strong>{{convertColumnNameToString($key)}}:</strong>
+                    <strong>{{convertColumnNameToString($key)}}</strong>
                     <input @if(strpos($key, 'Password') !== false) type="password" @else type="text" @endif name="{{$key}}" class="form-control" placeholder="">
                 </div>
             </div>

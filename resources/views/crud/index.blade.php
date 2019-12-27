@@ -42,7 +42,7 @@
         for(const key of keys){
             columnConfig.push({data: key, name: key});
         }
-        columnConfig.push({data: 'actions', name: 'actions'});
+        columnConfig.push({data: 'actions', name: 'actions', orderable: false, searchable: false});
 
         $('#{{$table}}_table').DataTable({
             "processing": true,
