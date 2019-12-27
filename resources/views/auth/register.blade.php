@@ -1,11 +1,11 @@
 <?php
-$arr_nations = ['Việt Nam' => 'Việt Nam', 'Hàn Quốc' => 'Hàn Quốc', 'Nhật Bản' => 'Nhật Bản', 'Đài Loan' => 'Đài Loan', 'Trung Quốc' => 'Trung Quốc', 'Singapore' => 'Singapore', 'Malaysia' => 'Malaysia'];
+$arr_nations = \App\Country::pluck('CountryName', 'id');
 $arr_fields = ['Sản xuất' => 'Sản xuất', 'Thương mại' => 'Thương mại', 'Dịch vụ' => 'Dịch vụ'];
-$arr_cities = \DB::table('cities')->orderBy('city_name', 'asc')->pluck('city_name', 'id');
+$arr_cities = \DB::table('cities')->orderBy('CityName', 'asc')->pluck('CityName', 'id');
 $arr_districts = \DB::table('districts')->get();
-$arr_nganh_cn = \App\Industry::pluck('industry_name', 'id');
-$arr_nam_hd = ['Dưới 1 năm' => 'Dưới 1 năm', 'Từ 1 đến dưới 3 năm' => 'Từ 1 đến dưới 3 năm', 'Từ 3 đến dưới 5 năm' => 'Từ 3 đến dưới 5 năm', 'Từ 5 đến dưới 10 năm' => 'Từ 5 đến dưới 10 năm', 'Từ 10 năm đến dưới 15 năm' => 'Từ 10 năm đến dưới 15 năm', 'Từ 15 năm đến dưới 20 năm' => 'Từ 15 năm đến dưới 20 năm', 'Trên 20 năm' => 'Trên 20 năm'];
-$arr_quy_mo = ["Dưới 10 người" => "Dưới 10 người", "Từ 10 đến dưới 20 người" => "Từ 10 đến dưới 20 người", "Từ 20 đến dưới 30 người" => "Từ 20 đến dưới 30 người", "Từ 30 đến dưới 50 người" => "Từ 30 đến dưới 50 người", "Từ 50 đến dưới 100 người" => "Từ 50 đến dưới 100 người", "Từ 100 đến dưới 200 người" => "Từ 100 đến dưới 200 người", "Từ 200 đến dưới 300 người" => "Từ 200 đến dưới 300 người", "Từ 300 đến dưới 500 người" => "Từ 300 đến dưới 500 người", "Từ 500 đến dưới 1000 người" => "Từ 500 đến dưới 1000 người", "Từ 1000 đến dưới 1500 người" => "Từ 1000 đến dưới 1500 người", "Từ 1500 đến dưới 2000 người" => "Từ 1500 đến dưới 2000 người", "Từ 2000 đến dưới 3000 người" => "Từ 2000 đến dưới 3000 người", "Từ 3000 đến dưới 5000 người" => "Từ 3000 đến dưới 5000 người", "Trên 5000 người" => "Trên 5000 người"];
+$arr_nganh_cn = \App\Industry::pluck('IndustryName', 'id');
+$arr_nam_hd = \App\Namhd::pluck('NamhdName', 'id');
+$arr_quy_mo = \App\Scale::pluc('ScaleName', 'id');
 ?>
 @extends('layouts.app')
 @section('content')
@@ -16,7 +16,7 @@ $arr_quy_mo = ["Dưới 10 người" => "Dưới 10 người", "Từ 10 đến d
                         <div class="row">
                         <div class="col-12">
                           <div class="pt-1">
-                              <div class="card border-primary">
+                              <div class="card border-secondary">
                                   <div class="card-body">
                                       <div class="container">
                                         <h6 class="mb-1 text-primary font-weight-bold">1. Tên công ty</h6>
@@ -57,43 +57,43 @@ $arr_quy_mo = ["Dưới 10 người" => "Dưới 10 người", "Từ 10 đến d
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-1">
-                                                <label for="district_name">Quận huyện&nbsp;<sup class="text-danger">*</sup></label>
-                                                <select class="form-control" name="district_name" value="{{ old('district_name') }}" required id="district">
+                                                <label for="CompanyDistrictName">Quận huyện&nbsp;<sup class="text-danger">*</sup></label>
+                                                <select class="form-control" name="CompanyDistrictName" value="{{ old('CompanyDistrictName') }}" required id="district">
                                                     <option value="">Vui lòng chọn</option>
                                                 </select>
-                                                <div class="invalid-feedback{{ $errors->has('district_name') ? ' d-block' : '' }}">
-                                                    {{ $errors->first('district_name') }}
+                                                <div class="invalid-feedback{{ $errors->has('CompanyDistrictName') ? ' d-block' : '' }}">
+                                                    {{ $errors->first('CompanyDistrictName') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-1">
-                                                <label for="industry_park">Khu công nghiệp&nbsp;<sup class="text-danger">*</sup></label>
-                                                <input type="text" class="form-control" name="industry_park" value="{{ old('industry_park') }}" required>
-                                                <div class="invalid-feedback{{ $errors->has('industry_park') ? ' d-block' : '' }}">
-                                                    {{ $errors->first('industry_park') }}
+                                                <label for="CompanyIndustryPark">Khu công nghiệp&nbsp;<sup class="text-danger">*</sup></label>
+                                                <input type="text" class="form-control" name="CompanyIndustryPark" value="{{ old('CompanyIndustryPark') }}" required>
+                                                <div class="invalid-feedback{{ $errors->has('CompanyIndustryPark') ? ' d-block' : '' }}">
+                                                    {{ $errors->first('CompanyIndustryPark') }}
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
                                             <div class="col-md-4 mb-2">
-                                                <label for="company_tax">Mã số thuế</label>
-                                                <input type="text" class="form-control" name="company_tax" value="{{ old('company_tax') }}" required>
-                                                <div class="invalid-feedback{{ $errors->has('company_tax') ? ' d-block' : '' }}">
-                                                    {{ $errors->first('company_tax') }}
+                                                <label for="CompanyTax">Mã số thuế</label>
+                                                <input type="text" class="form-control" name="CompanyTax" value="{{ old('CompanyTax') }}" required>
+                                                <div class="invalid-feedback{{ $errors->has('CompanyTax') ? ' d-block' : '' }}">
+                                                    {{ $errors->first('CompanyTax') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-2">
-                                                <label for="company_nationality">Quốc tịch&nbsp;<sup class="text-danger">*</sup></label>
-                                                {!! Form::select('company_nationality', $arr_nations, old('company_nationality'), ['placeholder' => 'Vui lòng chọn', 'class' => 'form-control', 'id' => '', 'required']) !!}
-                                                <div class="invalid-feedback{{ $errors->has('company_nationality') ? ' d-block' : '' }}">
-                                                    {{ $errors->first('company_nationality') }}
+                                                <label for="CompanyNationality">Quốc tịch&nbsp;<sup class="text-danger">*</sup></label>
+                                                {!! Form::select('CompanyNationality', $arr_nations, old('CompanyNationality'), ['placeholder' => 'Vui lòng chọn', 'class' => 'form-control', 'id' => '', 'required']) !!}
+                                                <div class="invalid-feedback{{ $errors->has('CompanyNationality') ? ' d-block' : '' }}">
+                                                    {{ $errors->first('CompanyNationality') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-2">
-                                                <label for="company_field">Lĩnh vực hoạt động&nbsp;<sup class="text-danger">*</sup></label>
-                                                {!! Form::select('company_field', $arr_fields, old('company_nationality'), ['placeholder' => 'Vui lòng chọn', 'class' => 'form-control', 'id' => '', 'required']) !!}
-                                                <div class="invalid-feedback{{ $errors->has('company_field') ? ' d-block' : '' }}">
-                                                    {{ $errors->first('company_field') }}
+                                                <label for="CompanyField">Lĩnh vực hoạt động&nbsp;<sup class="text-danger">*</sup></label>
+                                                {!! Form::select('CompanyField', $arr_fields, old('company_nationality'), ['placeholder' => 'Vui lòng chọn', 'class' => 'form-control', 'id' => '', 'required']) !!}
+                                                <div class="invalid-feedback{{ $errors->has('CompanyField') ? ' d-block' : '' }}">
+                                                    {{ $errors->first('CompanyField') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-1">
@@ -105,17 +105,17 @@ $arr_quy_mo = ["Dưới 10 người" => "Dưới 10 người", "Từ 10 đến d
                                             </div>
 
                                             <div class="col-md-4 mb-1">
-                                                <label for="company_operation_year">Số năm hoạt động tại VN&nbsp;<sup class="text-danger">*</sup></label>
-                                                {!! Form::select('company_operation_year', $arr_nam_hd, old('company_operation_year'), ['placeholder' => 'Vui lòng chọn', 'class' => 'form-control', 'id' => '', 'required']) !!}
-                                                <div class="invalid-feedback{{ $errors->has('company_operation_year') ? ' d-block' : '' }}">
-                                                    {{ $errors->first('company_operation_year') }}
+                                                <label for="namhd_id">Số năm hoạt động tại VN&nbsp;<sup class="text-danger">*</sup></label>
+                                                {!! Form::select('namhd_id', $arr_nam_hd, old('namhd_id'), ['placeholder' => 'Vui lòng chọn', 'class' => 'form-control', 'id' => '', 'required']) !!}
+                                                <div class="invalid-feedback{{ $errors->has('namhd_id') ? ' d-block' : '' }}">
+                                                    {{ $errors->first('namhd_id') }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-1">
-                                                <label for="company_personnel_scale">Quy mô nhân sự (người)&nbsp;<sup class="text-danger">*</sup></label>
-                                                {!! Form::select('company_personnel_scale', $arr_quy_mo, old('company_personnel_scale'), ['placeholder' => 'Vui lòng chọn', 'class' => 'form-control', 'id' => '', 'required']) !!}
-                                                <div class="invalid-feedback{{ $errors->has('company_personnel_scale') ? ' d-block' : '' }}">
-                                                    {{ $errors->first('company_personnel_scale') }}
+                                                <label for="scale_id">Quy mô nhân sự (người)&nbsp;<sup class="text-danger">*</sup></label>
+                                                {!! Form::select('scale_id', $arr_quy_mo, old('scale_id'), ['placeholder' => 'Vui lòng chọn', 'class' => 'form-control', 'id' => '', 'required']) !!}
+                                                <div class="invalid-feedback{{ $errors->has('scale_id') ? ' d-block' : '' }}">
+                                                    {{ $errors->first('scale_id') }}
                                                 </div>
                                             </div>
                                         </div>

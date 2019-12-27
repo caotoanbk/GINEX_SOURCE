@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class City extends Model
+class Scale extends Model
 {
-    protected $fillable = ['CityName'];
+    protected $fillable = ['ScaleName'];
     public $timestamps = false;
 }

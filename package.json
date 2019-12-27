@@ -22,8 +22,11 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "admin-lte": "^3.0.1",
         "animate.css": "^3.7.2",
         "bootstrap": "^4.4.1",
+        "datatables.net": "^1.10.20",
+        "datatables.net-bs4": "^1.10.20",
         "magnific-popup": "^1.1.0",
         "wowjs": "^1.1.3"
     }

@@ -7,7 +7,7 @@
         <title>Ginex HR Data &AMP; Survey</title>
         <!-- Font awesome -->
         <script src="https://kit.fontawesome.com/26fdcedf55.js"></script>
-        
+        <link rel="shortcut icon" type="image/png" href="/img/fav-icon.png"/>
         <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" href="css/landing-page.css">
 
@@ -48,7 +48,7 @@
                             <h2 class="letter-spacing">Bộ phận Số liệu &amp; Khảo sát Nhân sự</h2>
                             <h3>CÔNG TY CỔ PHẦN ĐẦU TƯ GINEX</h3>
                         </div>
-                        <a href="/salary-survey" class="btn btn-info" style="width: 23% !important;"><i class="fas fa-arrow-right"></i> Khảo sát lương</a>
+                        {{-- <a href="/salary-survey" class="btn btn-info" style="width: 23% !important;"><i class="fas fa-arrow-right"></i> Khảo sát lương</a> --}}
                     </div>
                 </div>
             </div>
@@ -61,8 +61,7 @@
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <div class="section-heading">
-                                <h1 class="bg-font-style">Our Services</h1>
-                                <h2>Dịch vụ của chúng tôi</h2>
+                                <h3 class="py-2">Dịch vụ của chúng tôi</h3>
                             </div>
                         </div>
                         <div class="col-md-8 col-12 image-hover">
@@ -70,9 +69,9 @@
                                 <div class="col-md-6 col-12 mb-4">
                                     <div class="card border-0 box-shadow-0 h-100">
                                         <div class="card-content">
-                                            <img src="./img/bg-img/2019-salary-survey.jpg" alt="" class="card-img-top img-fluid">
+                                            <a href="/salary-survey"><img src="./img/bg-img/2019-salary-survey.jpg" alt="" class="card-img-top img-fluid" /></a>
                                             <div class="card-body">
-                                                <a href="#" class="h5 text-dark">Khảo sát lương 2019</a>
+                                                <h5 class="font-weight-normal">Khảo sát lương 2019</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -82,7 +81,7 @@
                                         <div class="card-content">
                                             <img src="./img/bg-img/workers.jpg" alt="" class="card-img-top img-fluid" style="border-bottom: 1px solid rgba(51,102,255,0.1)">
                                             <div class="card-body">
-                                                <a href="#" class="h5 text-dark">Khảo sát nhu cầu người lao động</a>
+                                                <h5 class="font-weight-normal">Khảo sát nhu cầu người lao động</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -90,9 +89,9 @@
                                 <div class="col-md-6 col-12 mb-4 mb-md-0">
                                     <div class="card border-0 box-shadow-0 h-100">
                                         <div class="card-content">
-                                            <img src="./img/bg-img/jobs.jpg" alt="" class="card-img-top img-fluid">
+                                            <a href="http://gjobs.vn"><img src="./img/bg-img/jobs.jpg" alt="" class="card-img-top img-fluid" /></a>
                                             <div class="card-body">
-                                                <a href="#" class="h5 text-dark">Ứng viên gửi CV tìm cơ hội việc làm</a>
+                                                <h5 class="font-weight-normal">Ứng viên gửi CV tìm cơ hội việc làm</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -100,9 +99,9 @@
                                 <div class="col-md-6 col-12 mb-4 mb-md-0">
                                     <div class="card border-0 box-shadow-0 h-100">
                                         <div class="card-content">
-                                            <img src="./img/bg-img/training.png" alt="" class="card-img-top img-fluid" style="border-bottom: 1px solid rgba(51,102,255,0.1)">
+                                            <a href="#"><img src="./img/bg-img/training.png" alt="" class="card-img-top img-fluid" style="border-bottom: 1px solid rgba(51,102,255,0.1)" /></a>
                                             <div class="card-body">
-                                                <a href="#" class="h5 text-dark">Khảo sát nhu cầu đào tạo &amp; hội thảo</a>
+                                                <h5 class="font-weight-normal">Khảo sát nhu cầu đào tạo &amp; hội thảo</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -231,8 +230,7 @@
                 <div class="row gallery">
                     <div class="col-12 text-center">
                         <div class="section-heading">
-                            <h1 class="bg-font-style">Our partners</h1>
-                            <h2>Đối tác của chúng tôi</h2>
+                            <h3 class="py-2">Đối tác của chúng tôi</h3>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 text-center mb-lg-0 mb-sm-4 image-hover">
