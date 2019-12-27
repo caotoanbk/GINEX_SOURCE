@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Admin</title>
-  <script src="https://kit.fontawesome.com/26fdcedf55.js"></script>
   <link rel="shortcut icon" type="image/png" href="/img/fav-icon.png"/>
   <link rel="stylesheet" href="/css/admin.css">
-  <link rel="stylesheet" href="https://adminlte.io/themes/dev/AdminLTE/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -51,7 +49,7 @@
               <i class="nav-icon fas fa-city"></i>
               <p>
                 Thành phố
-                <span class="badge badge-info right">2</span>
+                <span class="badge badge-warning right">{{\App\City::count()}}</span>
               </p>
             </a>
           </li>
@@ -60,6 +58,7 @@
               <i class="nav-icon fas fa-bone"></i>
               <p>
                 Quận huyện
+                <span class="badge badge-warning right">{{\App\District::count()}}</span>
               </p>
             </a>
           </li>
@@ -68,6 +67,7 @@
               <i class="nav-icon fas fa-cat"></i>
               <p>
                 Ngành công nghiệp
+                <span class="badge badge-warning right">{{\App\Industry::count()}}</span>
               </p>
             </a>
           </li>
@@ -76,6 +76,7 @@
               <i class="nav-icon fas fa-carrot"></i>
               <p>
                 Quy mô
+                <span class="badge badge-warning right">{{\App\Scale::count()}}</span>
               </p>
             </a>
           </li>
@@ -84,6 +85,7 @@
               <i class="nav-icon fas fa-bullseye"></i>
               <p>
                 Năm hoạt động
+                <span class="badge badge-warning right">{{\App\Namhd::count()}}</span>
               </p>
             </a>
           </li>
@@ -92,6 +94,7 @@
               <i class="nav-icon fab fa-earlybirds"></i>
               <p>
                 Quốc tịch công ty
+                <span class="badge badge-warning right">{{\App\Country::count()}}</span>
               </p>
             </a>
           </li>
@@ -100,6 +103,7 @@
               <i class="nav-icon fas fa-bomb"></i>
               <p>
                 Company
+                <span class="badge badge-warning right">{{\App\Company::count()}}</span>
               </p>
             </a>
           </li>

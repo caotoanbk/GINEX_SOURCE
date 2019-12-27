@@ -11,7 +11,6 @@ Route::get('/salary-survey', 'PagesController@surveyIndex');
 Route::get('/admin', 'AdminController@index');
 
 Route::group(['prefix' => 'crud'], function(){
-    Route::get('/', 'CrudController@home');
     Route::get('/data/{table}', 'CrudController@datatable')->name('crud.data');
     Route::get('/{table}', 'CrudController@index')->name('crud.index');
     Route::get('/{table}/show/{id}', 'CrudController@show')->name('crud.show');

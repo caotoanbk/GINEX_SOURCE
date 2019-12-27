@@ -6,7 +6,7 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    <h1 class="h2 mb-2 text-gray-800">Manage {{ ucfirst($table) }}</h1>
+    <h1 class="h4 my-2 text-gray-800">Manage {{ ucfirst($table) }}</h1>
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">

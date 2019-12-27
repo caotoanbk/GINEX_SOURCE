@@ -5,8 +5,6 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         
         <title>Ginex HR Data &AMP; Survey</title>
-        <!-- Font awesome -->
-        <script src="https://kit.fontawesome.com/26fdcedf55.js"></script>
         <link rel="shortcut icon" type="image/png" href="/img/fav-icon.png"/>
         <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" href="css/landing-page.css">

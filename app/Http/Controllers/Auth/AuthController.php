@@ -29,7 +29,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/salary-survey';
 
     /**
      * Create a new authentication controller instance.
@@ -50,13 +50,13 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'company_name' => 'required',
-            'company_short_name' => 'required',
+            'CompanyName' => 'required',
+            'CompanyShortName' => 'required',
             'city_id' => 'required',
-            'district_name' => 'required',
-            'industry_park' => 'required',
-            'company_nationality' => 'required',
-            'company_field' => 'required',
+            'CompanyDistrictName' => 'required',
+            'CompanyIndustryPark' => 'required',
+            'country_id' => 'required',
+            'CompanyField' => 'required',
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
@@ -72,24 +72,24 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         $company = Company::create([
-            'company_name' => $data['company_name'],
-            'company_short_name' => $data['company_short_name'],
-            'company_product' => $data['company_product'],
+            'CompanyName' => $data['CompanyName'],
+            'CompanyShortName' => $data['CompanyShortName'],
+            'CompanyProduct' => $data['CompanyProduct'],
             'city_id' => $data['city_id'],
-            'district_name' => $data['district_name'],
-            'industry_park' => $data['industry_park'],
-            'company_tax' => $data['company_tax'],
-            'company_nationality' => $data['company_nationality'],
-            'company_field' => $data['company_field'],
+            'CompanyDistrictName' => $data['CompanyDistrictName'],
+            'CompanyIndustryPark' => $data['CompanyIndustryPark'],
+            'CompanyTax' => $data['CompanyTax'],
+            'country_id' => $data['country_id'],
+            'CompanyField' => $data['CompanyField'],
             'industry_id' => $data['industry_id'],
-            'company_operation_year' => $data['company_operation_year'],
-            'company_personnel_scale' => $data['company_personnel_scale']
+            'namhd_id' => $data['namhd_id'],
+            'scale_id' => $data['scale_id']
         ]);
         return User::create([
             'name' => $data['name'],
             'position' => $data['position'],
             'mobile' => $data['mobile'],
-            'type' => 0,
+            'type' => 1,
             'company_id' => $company->id,
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
