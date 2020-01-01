@@ -8,4 +8,9 @@ class Company extends Model
 {
     protected $fillable = ['CompanyName', 'CompanyShortName', 'CompanyProduct', 'city_id', 'CompanyDistrictName', 'CompanyIndustryPark', 'CompanyTax', 'country_id', 'CompanyField', 'industry_id', 'namhd_id', 'scale_id'];
     public $timestamps = false;
+
+    public function welfares()
+    {
+        return $this->hasMany('\App\Welfare');
+    }
 }

@@ -1,5 +1,15 @@
 @extends('admin.layout')
- 
+@section('css')
+    <style>
+        table th{
+            min-width: 130px;
+            font-size: 14px;
+        }
+        table td{
+            font-size: 14px;
+        }
+    </style>
+@endsection
 @section('content')
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
@@ -14,11 +24,11 @@
         </div>
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-bordered" id="{{$table}}_table">
+            <table class="table table-bordered table-sm" id="{{$table}}_table">
                 <thead>
-                    <th>No</th>
+                    <th style="min-width: 30px !important;">No</th>
                     @foreach($columnInfos as $key => $value)
-                    <th>{{ convertColumnNameToString($key) }}</th>
+                    <th style="min-width: 150px;">{{ convertColumnNameToString($key) }}</th>
                     @endforeach
                     <th style="width: 180px !important;">Action</th>
                 </thead>
@@ -48,6 +58,7 @@
             "processing": true,
             "serverSide": true,
             "method": 'get',
+            "scrollX": true,
             "paging": true,
             "pageLength": 10,
             "ajax": '{!! route('crud.data', $table) !!}',

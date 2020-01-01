@@ -9,20 +9,25 @@ use App\Salary;
 use App\Welfare;
 use Yajra\Datatables\Facades\Datatables;
 
-class AdminController extends Controller
+class SsurveyController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
-        return view('admin.index');
+        return view('ssurvey.index');
     }
+
     public function salary_index()
     {
-        return view('admin.salary_index');
+        return view('ssurvey.salary_index');
     }
 
     public function welfare_index()
     {
-        return view('admin.phucloi_index');
+        return view('ssurvey.phucloi_index');
     }
 
     public function welfare_store(Request $request)
@@ -31,7 +36,7 @@ class AdminController extends Controller
             $request->merge(['company_id' => \Auth::user()->company->id]);
         }
         Welfare::create($request->except('_token'));
-        return redirect('/admin/welfare');
+        return redirect('/ssurvey/welfare');
     }
 
     public function salary_excel_store(Request $request){
@@ -72,7 +77,7 @@ class AdminController extends Controller
               ];
               \App\Salary::create($salary_data);
           }
-          return redirect('\admin\salary');
+          return redirect('\ssurvey\salary');
         }
       }
 
@@ -134,14 +139,14 @@ class AdminController extends Controller
         ];
 
         Welfare::create($phucloi_data);
-        return redirect('/admin/welfare');
+        return redirect('/ssurvey/welfare');
         // return redirect()->back()->with('msg', 'Cập nhật thành công');
       }
     }
 
     public function welfare_create()
     {
-        return view('admin.phucloi');
+        return view('ssurvey.phucloi');
     }
 
     public function welfare_data(Request $request)

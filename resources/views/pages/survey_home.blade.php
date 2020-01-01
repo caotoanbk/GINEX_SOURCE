@@ -40,18 +40,18 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation" style="outline: none;"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="nav">
                     <ul class="navbar-nav ml-auto">
-                        {{-- @if(!\Auth::check()) --}}
+                      @if(!\Auth::check())
                         <li class="nav-item"><a href="/" class="nav-link menu-item">Trang chủ</a></li>
                         <li class="nav-item"><a href="/register" class="nav-link menu-item">Đăng ký</a></li>
                         <li class="nav-item ml-2 d-flex" style="align-items:center"><a href="/login" class="btn btn-primary text-center" style="border-radius:10em;min-width:105px;padding-top:2px;padding-bottom:2px;">Đăng nhập</a></li>
-                      {{-- @else
-                        <li class="nav-item"><a href="/phuc-loi" class="nav-link menu-item">Chế độ phúc lợi</a></li>
-                        <li class="nav-item"><a href="/thong-tin-luong" class="nav-link menu-item">Chế độ lương</a></li>
+                      @else
                         <li class="nav-item" style="position: ">
-                          <a class="link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600" style="font-size: 1em;">Xin chào Ginex</span>
-                            <img class="img-profile rounded-circle" style="max-height: 25px;" src="https://source.unsplash.com/fpZZEV0uQwA/60x60">
-                          </a>
+                        <a class="nav-link menu-item" href="/ssurvey" id="userDropdown" role="button">
+                            <span class="d-none d-lg-inline text-gray-600" style="font-size: 1em;">Chế độ lương, phúc lợi</span>
+                        </a>
+                        <span>|</span>
+                        <span class="pl-1 d-none d-lg-inline text-gray-600" style="font-size: 1em;">Xin chào <strong>{{\Auth::user()->name}}</strong></span>
+
                           <!-- Dropdown - User Information -->
                           <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                             <a class="dropdown-item" href="#profile">
@@ -69,7 +69,7 @@
                             </a>
                           </div>
                       </li>
-                      @endif --}}
+                      @endif
                     </ul>
                 </div>
             </div>

@@ -39468,16 +39468,28 @@ $(document).ready(function () {
 
 /***/ }),
 
+/***/ "./resources/assets/sass/survey.scss":
+/*!*******************************************!*\
+  !*** ./resources/assets/sass/survey.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!**************************************************************************************************************!*\
-  !*** multi ./resources/assets/js/app.js ./resources/assets/sass/app.scss ./resources/assets/sass/admin.scss ***!
-  \**************************************************************************************************************/
+/*!**************************************************************************************************************************************************!*\
+  !*** multi ./resources/assets/js/app.js ./resources/assets/sass/app.scss ./resources/assets/sass/admin.scss ./resources/assets/sass/survey.scss ***!
+  \**************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! E:\projects\GINEX_SOURCE\resources\assets\js\app.js */"./resources/assets/js/app.js");
 __webpack_require__(/*! E:\projects\GINEX_SOURCE\resources\assets\sass\app.scss */"./resources/assets/sass/app.scss");
-module.exports = __webpack_require__(/*! E:\projects\GINEX_SOURCE\resources\assets\sass\admin.scss */"./resources/assets/sass/admin.scss");
+__webpack_require__(/*! E:\projects\GINEX_SOURCE\resources\assets\sass\admin.scss */"./resources/assets/sass/admin.scss");
+module.exports = __webpack_require__(/*! E:\projects\GINEX_SOURCE\resources\assets\sass\survey.scss */"./resources/assets/sass/survey.scss");
 
 
 /***/ })
