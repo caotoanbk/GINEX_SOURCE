@@ -46,9 +46,15 @@
                         <li class="nav-item ml-2 d-flex" style="align-items:center"><a href="/login" class="btn btn-primary text-center" style="border-radius:10em;min-width:105px;padding-top:2px;padding-bottom:2px;">Đăng nhập</a></li>
                       @else
                         <li class="nav-item" style="position: ">
+                        @if(\Auth::user()->role == 'admin')
+                        <a class="nav-link menu-item" href="/admin" id="userDropdown" role="button">
+                            <span class="d-none d-lg-inline text-gray-600" style="font-size: 1em;">Chế độ lương, phúc lợi</span>
+                        </a>
+                        @else
                         <a class="nav-link menu-item" href="/ssurvey" id="userDropdown" role="button">
                             <span class="d-none d-lg-inline text-gray-600" style="font-size: 1em;">Chế độ lương, phúc lợi</span>
                         </a>
+                        @endif
                         <span>|</span>
                         <span class="pl-1 d-none d-lg-inline text-gray-600" style="font-size: 1em;">Xin chào <strong>{{\Auth::user()->name}}</strong></span>
 

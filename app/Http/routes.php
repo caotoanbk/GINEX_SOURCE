@@ -8,8 +8,8 @@ Route::get('/', function () {
 
 Route::get('/salary-survey', 'PagesController@surveyIndex');
 
-Route::group(['prefix' => 'admin'], function(){
-    Route::get('/', 'AdminController@index');
+Route::group(['prefix' => 'admin', 'middleware' => ['auth','check_user_role:admin']], function(){
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
     Route::get('/salary/data', 'AdminController@salary_data');
     Route::get('/salary', 'AdminController@salary_index');
     Route::get('/welfare', 'AdminController@welfare_index');
@@ -32,7 +32,7 @@ Route::group(['prefix' => 'crud'], function(){
 
 Route::get('/ssurvey/welfare/data', 'SsurveyController@welfare_data');
 
-Route::group(['prefix' => 'ssurvey'], function(){
+Route::group(['prefix' => 'ssurvey', 'middleware' => ['auth', 'check_user_role:']], function(){
     Route::get('/', 'SsurveyController@index')->name('ssurvey.index');
     Route::get('/salary/data', 'SsurveyController@salary_data');
     Route::get('/salary', 'SsurveyController@salary_index');

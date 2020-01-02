@@ -15,6 +15,11 @@ class User extends Authenticatable
         'name', 'email', 'password', 'position', 'mobile', 'type', 'company_id'
     ];
 
+    public function hasRole($role)
+    {
+        return $this->getAttribute('role') == $role;
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *
